@@ -1,0 +1,24 @@
+server:
+  port: 8099
+  tomcat:
+    uri-encoding: UTF-8  #解决http响应数据中文乱码问题  第一步
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master  #配置仓库分支
+      profiles:
+        active:  native #git #设置使用本地配置(默认是git,可以设置：subversion(SVN)，native(本地))
+      server:
+        git:
+          uri: https://github.com/fengxue530/springCloudDemoMe   # 配置git仓库地址
+          search-paths: config/testrepo                           #配置文件所在的目录
+          #username:     开放项目不需要
+          #password:
+
+  http:              #解决http响应数据中文乱码问题 第二步
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
