@@ -1,0 +1,19 @@
+server:
+  port: 8771
+
+spring:
+  application:
+    name: config-client
+
+  cloud:
+    config:
+      name: config-client             #对应config server Url中的{application}
+      profile: master                  #配置环境，对应config server Url中的{profile}
+      #label: trunk                    #配置分支(不配置则默认：git则是master,svn则是trunk)，
+      uri: http://localhost:8770      #配置中心地址
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #暴露所有端口，也可以指定某一个环境（先management.endpoint.{profile}.enabled=true，然后这里指定这个{profile},多个用,分隔）

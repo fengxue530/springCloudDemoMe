@@ -12,6 +12,7 @@
         <module name="server-ribbon" />
         <module name="eureka-server" />
         <module name="springCloudDemoMe" />
+        <module name="config-client" />
         <module name="serice-feign" />
       </profile>
     </annotationProcessing>
@@ -21,6 +22,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config-client" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-server" options="-parameters" />

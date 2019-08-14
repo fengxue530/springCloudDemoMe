@@ -1,5 +1,5 @@
 server:
-  port: 8099
+  port: 8770
   tomcat:
     uri-encoding: UTF-8  #解决http响应数据中文乱码问题  第一步
 spring:
