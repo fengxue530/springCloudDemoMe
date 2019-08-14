@@ -9,7 +9,7 @@ spring:
     config:
       label: master  #配置仓库分支
       profiles:
-        active:  native #git #设置使用本地配置(默认是git,可以设置：subversion(SVN)，native(本地))
+        active: git #设置使用本地配置(默认是git,可以设置：subversion(SVN)，native(本地))
       server:
         git:
           uri: https://github.com/fengxue530/springCloudDemoMe   # 配置git仓库地址
