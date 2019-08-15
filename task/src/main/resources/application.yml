@@ -1,0 +1,9 @@
+
+spring:
+  application:
+    name: task
+server:
+  port: 8772
+
+timing-task.cron1: 0/1 * * * * ?
+timing-task.cron2: 0/5 * * * * ?

@@ -17,12 +17,13 @@ import java.util.Map;
 @RefreshScope
 public class TestController {
 
+    @Value("${myName}")
+    private String myName;
 
     @Value("${username}")
     private String userName;
 
-    @Value("${password}")
-    private String password;
+
 
 
     @RequestMapping("/test")
@@ -31,7 +32,7 @@ public class TestController {
         model.put("getMode", "@Value");
         Map<String, String> remoteCgfMap = new HashMap<>();
         remoteCgfMap.put("clientUserName", userName);
-        remoteCgfMap.put("clientPassword", password);
+        remoteCgfMap.put("myName", myName);
         model.put("remoteConfig", remoteCgfMap);
         return model;
     }

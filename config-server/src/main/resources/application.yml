@@ -1,10 +1,25 @@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+  # 心跳检测检测与续约时间
+  # 测试时将值设置设置小些，保证服务关闭后注册中心能及时踢出服务
+  # lease-renewal-interval-in-seconds 每间隔1s，向服务端发送一次心跳，证明自己依然”存活“
+  # lease-expiration-duration-in-seconds  告诉服务端，如果我2s之内没有给你发心跳，就代表我“死”了，将我踢出掉。
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+
 server:
   port: 8770
   tomcat:
-    uri-encoding: UTF-8  #解决http响应数据中文乱码问题  第一步
+    #解决http响应数据中文乱码问题  第一步
+    uri-encoding: UTF-8
 spring:
   application:
-    name: config-server
+    name: config-server2
   cloud:
     config:
       label: master  #配置仓库分支
@@ -17,7 +32,8 @@ spring:
           #username:     开放项目不需要
           #password:
 
-  http:              #解决http响应数据中文乱码问题 第二步
+  #解决http响应数据中文乱码问题 第二步
+  http:
     encoding:
       charset: UTF-8
       force: true

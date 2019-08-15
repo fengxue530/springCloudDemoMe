@@ -13,6 +13,7 @@
         <module name="eureka-server" />
         <module name="springCloudDemoMe" />
         <module name="config-client" />
+        <module name="task" />
         <module name="serice-feign" />
       </profile>
     </annotationProcessing>
@@ -30,6 +31,7 @@
       <module name="server-ribbon" options="-parameters" />
       <module name="service-ribbon" options="-parameters" />
       <module name="service-zuul" options="-parameters" />
+      <module name="task" options="-parameters" />
     </option>
   </component>
 </project>

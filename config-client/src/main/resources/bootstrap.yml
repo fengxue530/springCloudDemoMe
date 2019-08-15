@@ -1,3 +1,9 @@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
 server:
   port: 8771
 
@@ -7,11 +13,15 @@ spring:
 
   cloud:
     config:
-      name: config-client             #对应config server Url中的{application}
-      profile: master                  #配置环境，对应config server Url中的{profile}
-      #label: trunk                    #配置分支(不配置则默认：git则是master,svn则是trunk)，
-      uri: http://localhost:8770      #配置中心地址
-
+      #name: config-client             #对应config server Url中的{application}
+      #profile: master                  #配置环境，对应config server Url中的{profile}
+      ##label: trunk                    #配置分支(不配置则默认：git则是master,svn则是trunk)，
+      #uri: http://localhost:8770      #配置中心地址
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER2    # 由写死配置中心地址改为应用id  如果部署多个应用，可以实现分布式 高可用 负载均衡
+      profile: master                  # 与config-server 访问路径有关  http://localhost:8770/config-client-master.properties   必填
+      label: master
 management:
   endpoints:
     web:
