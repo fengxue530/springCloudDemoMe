@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.Date;
 import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @auther: mabaofeng
@@ -61,6 +62,7 @@ public class DynamicTaskController {
 
     @RequestMapping("/modify")
     public String modifyTask() {
+       /* TimeUnit.SECONDS.sleep();*/
         Boolean stopResult = null;
         // 停止定时任务
         if (scheduledFuture != null) {

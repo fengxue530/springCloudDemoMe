@@ -1,0 +1,30 @@
+
+spring:
+   rabbitmq:
+     host: 192.168.110.129  #ubuntu2  地址
+     port: 5672
+     username: admin       # 超管账号密码  admin  123456
+     password: 123456
+   cloud:
+     bus:
+       enabled: true
+       trace:
+         enabled: true
+management:
+   endpoints:
+     web:
+       exposure:
+         include: bus-refresh,refresh
+
+#spring.rabbitmq.host=localhost
+#spring.rabbitmq.port=5672
+#spring.rabbitmq.username=guest
+#spring.rabbitmq.password=guest
+#
+
+##spring.cloud.bus的三个配置
+#spring.cloud.bus.enabled=true
+#spring.cloud.bus.trace.enabled=true
+#management.endpoints.web.exposure.include=bus-refresh
+
+

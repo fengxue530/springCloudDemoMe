@@ -23,9 +23,6 @@ public class TestController {
     @Value("${username}")
     private String userName;
 
-
-
-
     @RequestMapping("/test")
     public Object test() {
         Map<String, Object> model = new HashMap<>();

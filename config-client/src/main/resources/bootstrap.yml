@@ -19,7 +19,7 @@ spring:
       #uri: http://localhost:8770      #配置中心地址
       discovery:
         enabled: true
-        service-id: CONFIG-SERVER2    # 由写死配置中心地址改为应用id  如果部署多个应用，可以实现分布式 高可用 负载均衡
+        service-id: config-server    # 由写死配置中心地址改为应用id  如果部署多个应用，可以实现分布式 高可用 负载均衡
       profile: master                  # 与config-server 访问路径有关  http://localhost:8770/config-client-master.properties   必填
       label: master
 management:
