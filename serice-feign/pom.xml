@@ -66,6 +66,12 @@
         </dependency>
         <!--添加熔断器 仪表盘  end -->
 
+        <!--调用链追踪-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+
 
     </dependencies>
 

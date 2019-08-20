@@ -1,0 +1,15 @@
+server:
+  port: 8774
+spring:
+  profiles: peer2
+  application:
+    name: eureka-server
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    # The following two values indicate that it is server
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka/

@@ -1,7 +1,8 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      #defaultZone: http://peer1:8761/eureka/
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8774/eureka/
 
   # 心跳检测检测与续约时间
   # 测试时将值设置设置小些，保证服务关闭后注册中心能及时踢出服务
@@ -11,9 +12,20 @@ eureka:
     lease-renewal-interval-in-seconds: 1
     lease-expiration-duration-in-seconds: 2
 server:
-  port: 8762
+  port: 8763
 spring:
   application:
     name: service-hi
+  ## 使用zipkin 进行链式调用追踪
+  zipkin:
+    base-url: http://localhost:9411
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
 

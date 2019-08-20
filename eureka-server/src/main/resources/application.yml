@@ -1,14 +1,24 @@
+#server:
+#  port: 8761
+#  # 测试时关闭自我保护机制，保证不可用服务及时踢出, 建议生产环境改为 true
+#  enable-self-preservation: false
 
-server:
-  port: 8761
-  # 测试时关闭自我保护机制，保证不可用服务及时踢出, 建议生产环境改为 true
-  enable-self-preservation: false
+#ureka:
+# instance:
+#   hostname: 127.0.0.1
+# client:
+#   registerWithEureka: false
+#   fetchRegistry: false
+#   serviceUrl:
+#     defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
-eureka:
-  instance:
-    hostname: 127.0.0.1
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#spring:
+#  profiles:
+#    active: master
+
+
+# active 这里是注意点，当启动 peer1 实例时，active: peer1  ,启动 peer2  active: peer2
+spring:
+  profiles:
+    active: peer2
+

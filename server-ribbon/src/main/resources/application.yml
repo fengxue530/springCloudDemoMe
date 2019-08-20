@@ -7,3 +7,6 @@ server:
 spring:
   application:
     name: service-ribbon
+  ## 使用zipkin 进行链式调用追踪
+  zipkin:
+    base-url: http://localhost:9411
