@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/config-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sc-f-gateway-first-sight" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/serice-feign" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-ribbon" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-lucy" charset="UTF-8" />

@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/test/pom.xml" />
         <option value="$PROJECT_DIR$/service-lucy/pom.xml" />
         <option value="$PROJECT_DIR$/service-turbine/pom.xml" />
+        <option value="$PROJECT_DIR$/sc-f-gateway-first-sight/pom.xml" />
       </list>
     </option>
   </component>

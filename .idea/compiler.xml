@@ -12,6 +12,7 @@
         <module name="config-server" />
         <module name="service-lucy" />
         <module name="server-ribbon" />
+        <module name="sc-f-gateway-first-sight" />
         <module name="eureka-server" />
         <module name="service-turbine" />
         <module name="springCloudDemoMe" />
@@ -30,6 +31,7 @@
       <module name="config-server" options="-parameters" />
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="sc-f-gateway-first-sight" options="-parameters" />
       <module name="serice-feign" options="-parameters" />
       <module name="server-ribbon" options="-parameters" />
       <module name="service-lucy" options="-parameters" />
