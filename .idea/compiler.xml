@@ -6,19 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eureka-client" />
-        <module name="service-zuul" />
-        <module name="test" />
-        <module name="config-server" />
         <module name="service-lucy" />
-        <module name="server-ribbon" />
-        <module name="sc-f-gateway-first-sight" />
-        <module name="eureka-server" />
-        <module name="service-turbine" />
-        <module name="springCloudDemoMe" />
+        <module name="config-server" />
         <module name="config-client" />
-        <module name="task" />
+        <module name="server-ribbon" />
+        <module name="eureka-client" />
+        <module name="springCloudDemoMe" />
         <module name="serice-feign" />
+        <module name="test" />
+        <module name="sc-f-gateway-predict" />
+        <module name="service-zuul" />
+        <module name="task" />
+        <module name="service-turbine" />
+        <module name="eureka-server" />
+        <module name="sc-f-gateway-first-sight" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,6 +33,7 @@
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="sc-f-gateway-first-sight" options="-parameters" />
+      <module name="sc-f-gateway-predict" options="-parameters" />
       <module name="serice-feign" options="-parameters" />
       <module name="server-ribbon" options="-parameters" />
       <module name="service-lucy" options="-parameters" />
